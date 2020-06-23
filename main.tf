@@ -41,7 +41,7 @@ resource "fastly_service_v1" "demo" {
 
   healthcheck {
     name              = "global-health-check"
-    host              = var.domain_name
+    host              = aws_spot_instance_request.web_server.0.public_ip
     path              = "/index.html"
     check_interval    = 60000
     expected_response = 200

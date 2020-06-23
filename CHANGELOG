@@ -1,0 +1,11 @@
+## [0.2.0] - 2020-06-23
+### Added
+- Fastly now has 2 backends to loadbalance between instead of just 1 instance.
+- Instances now use cheapest spot instances by default for demonstration purposes.
+- Changelog with human-friendly updates.
+
+### Changed
+- App name is now interpolated into tag and resource names instead of hardcoded.
+
+### Security
+- Moved subdomain url and ssh key name to .tfvars file
