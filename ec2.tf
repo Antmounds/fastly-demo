@@ -18,7 +18,7 @@ resource "aws_spot_instance_request" "web_server" {
   ami                    = data.aws_ami.ubuntu.image_id
   availability_zone      = "us-east-1f"
   instance_type          = "t3a.nano"
-  key_name               = "ant"
+  key_name               = var.key_name
   spot_price             = "0.0015"
   vpc_security_group_ids = [aws_security_group.instance.id]
 

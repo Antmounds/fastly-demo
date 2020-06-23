@@ -63,6 +63,12 @@ variable "domain_name" {
   description = "Domain name used as the root for Fastly services"
 }
 
+variable "key_name" {
+  type        = string
+  default     = ""
+  description = "SSH key name for connecting to instances"
+}
+
 variable "owner" {
   type        = string
   default     = ""
